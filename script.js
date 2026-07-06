@@ -1,8 +1,13 @@
-const button = document.getElementById("begin");
+document
+.getElementById("begin")
+.addEventListener("click",()=>{
 
-button.addEventListener("click",()=>{
+document
+.getElementById("favorite")
+.scrollIntoView({
 
-alert("Chapter 1 Coming Next ❤️");
+behavior:"smooth"
 
 });
-// V2.1
+
+});

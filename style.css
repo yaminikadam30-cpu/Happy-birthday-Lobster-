@@ -35,16 +35,6 @@ scroll-behavior:smooth;
 
 }
 
-    scroll-snap-type:y mandatory;
-
-}
-
-section{
-
-    scroll-snap-align:start;
-
-}
-
 /* =====================================
 LANDING PAGE
 ===================================== */
@@ -342,9 +332,11 @@ STORY CARDS
 
     color:#d8d8d8;
 
-    line-height:2;
+    line-height:2.2;
 
-    font-size:1.05rem;
+    font-size:1.15rem;
+
+    max-width:520px;
 
 }
 

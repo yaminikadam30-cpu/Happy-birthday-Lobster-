@@ -1,44 +1,46 @@
 // ======================================
-// SMOOTH SCROLL
+// LET'S BEGIN BUTTON
 // ======================================
 
 const beginButton = document.getElementById("beginButton");
+const favoriteSection = document.getElementById("favorite");
+
+// Create the fade screen
+const fadeScreen = document.createElement("div");
+fadeScreen.className = "fade-screen";
+document.body.appendChild(fadeScreen);
 
 beginButton.addEventListener("click", () => {
 
-    document.getElementById("favorite").scrollIntoView({
-        behavior: "smooth"
-    });
+    // Disable multiple clicks
+    beginButton.disabled = true;
+
+    // Fade to black
+    fadeScreen.classList.add("active");
+
+    setTimeout(() => {
+
+        // Reveal the next section
+        favoriteSection.classList.add("show");
+
+        // Scroll to it
+        favoriteSection.scrollIntoView({
+            behavior: "smooth"
+        });
+
+        // Fade back
+        setTimeout(() => {
+
+            fadeScreen.classList.remove("active");
+
+        }, 600);
+
+    }, 450);
 
 });
 
 // ======================================
-// MUSIC BUTTON
-// ======================================
-
-const musicButton = document.getElementById("musicButton");
-
-let playing = false;
-
-// We'll connect the actual music later
-musicButton.addEventListener("click", () => {
-
-    if (playing) {
-
-        musicButton.innerHTML = "♫";
-        playing = false;
-
-    } else {
-
-        musicButton.innerHTML = "❚❚";
-        playing = true;
-
-    }
-
-});
-
-// ======================================
-// FADE-IN ANIMATION ON SCROLL
+// SCROLL ANIMATION
 // ======================================
 
 const cards = document.querySelectorAll(".story-card");

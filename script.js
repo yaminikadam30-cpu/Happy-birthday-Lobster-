@@ -1,13 +1,35 @@
-document
-.getElementById("begin")
-.addEventListener("click",()=>{
+// ---------- LANDING BUTTON ----------
 
-document
-.getElementById("favorite")
-.scrollIntoView({
+const beginButton = document.getElementById("beginButton");
 
-behavior:"smooth"
+beginButton.addEventListener("click", () => {
+
+    document.getElementById("meet").scrollIntoView({
+        behavior: "smooth"
+    });
 
 });
+
+// ---------- MUSIC BUTTON ----------
+
+const musicButton = document.getElementById("musicButton");
+
+let playing = false;
+
+musicButton.addEventListener("click", () => {
+
+    if (!playing) {
+
+        musicButton.innerHTML = "❚❚";
+        playing = true;
+
+        // Music will be added in Version 3.2
+
+    } else {
+
+        musicButton.innerHTML = "♫";
+        playing = false;
+
+    }
 
 });

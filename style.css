@@ -21,13 +21,37 @@ body{
 
 }
 
+body.lock-scroll{
+
+    overflow:hidden;
+
+}
+
+html{
+
+    html{
+
+scroll-behavior:smooth;
+
+}
+
+    scroll-snap-type:y mandatory;
+
+}
+
+section{
+
+    scroll-snap-align:start;
+
+}
+
 /* =====================================
 LANDING PAGE
 ===================================== */
 
 .landing{
 
-    min-height:100vh;
+    height:100vh;
 
     display:grid;
 
@@ -40,6 +64,8 @@ LANDING PAGE
     padding:0 8%;
 
     position:relative;
+
+    scroll-snap-align:start;
 
 }
 

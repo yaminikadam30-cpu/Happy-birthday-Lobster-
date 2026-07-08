@@ -1,28 +1,4 @@
 // ======================================
-// LET'S BEGIN BUTTON
-// ======================================
-
-const beginButton = document.getElementById("beginButton");
-
-beginButton.addEventListener("click", () => {
-
-    beginButton.style.opacity = "0";
-
-    setTimeout(() => {
-
-        window.scrollTo({
-
-            top: window.innerHeight,
-
-            behavior: "smooth"
-
-        });
-
-    },200);
-
-});
-
-// ======================================
 // SCROLL ANIMATION
 // ======================================
 

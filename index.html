@@ -537,5 +537,56 @@ for My Lobster 🦞
 <script src="script.js"></script>
 
 </body>
+<style>
+    .landing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    min-height: 100vh;
+    padding: 60px 8%;
+}
+
+.left,
+.right {
+    flex: 1;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-frame img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .landing {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .hero-frame img {
+        max-width: 320px;
+    }
+}
+</style>
 
 </html>
